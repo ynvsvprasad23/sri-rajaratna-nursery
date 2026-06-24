@@ -1,0 +1,335 @@
+/* ==========================================
+   YOUR EXISTING CODE (మీ పాత కోడ్)
+   ========================================== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+.hero{
+    width:100%;
+    height:100vh;
+    background:url("assets/background main/bg.png") center center/cover no-repeat;
+    position:relative;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.45);
+}
+
+nav{
+    position:relative;
+    z-index:2;
+    display:flex;
+    align-items:center;
+    padding:20px 60px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo img{
+    width:75px;
+    height:75px;
+    object-fit:contain;
+}
+
+.logo-text{
+    color:white;
+    font-size:22px;
+    font-weight:bold;
+    line-height:1.1;
+}
+
+.logo-text span{
+    color:#90EE90;
+    font-size:26px;
+}
+
+/* MENU CENTER */
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:35px;
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:18px;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#7CFC00;
+}
+
+/* INSTAGRAM ICON */
+.social-icons{
+    margin-left:auto;
+}
+
+.social-icons a{
+    color:white;
+    font-size:35px;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.social-icons a:hover{
+    color:#E1306C;
+    transform:scale(1.1);
+}
+
+.content{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align:center;
+    color:white;
+    z-index:2;
+    width:90%;
+}
+
+.content h3{
+    font-size:28px;
+    margin-bottom:15px;
+    color:#90EE90;
+}
+
+.content h1{
+    font-size:70px;
+    margin-bottom:20px;
+    color:#90EE90;
+}
+
+.content p{
+    font-size:22px;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:14px 30px;
+    background:#7CFC00;
+    color:black;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:5px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+}
+
+
+/* ==========================================
+   NEW ATTACHED SECTION CODE (కొత్త సెక్షన్ కోడ్)
+   ========================================== */
+
+/* కొత్త సెక్షన్ మెయిన్ కంటైనర్ */
+.nursery-container {
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    background-color: #eaf5e9; /* ఇమేజ్‌లో ఉన్న లైట్ గ్రీన్ బ్యాక్‌గ్రౌండ్ */
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 80px auto; /* పై హీరో సెక్షన్ కి, దీనికి మధ్య పర్ఫెక్ట్ గ్యాప్ కోసం */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* ఎడమ వైపు ఇమేజ్ డిజైన్ మరియు ఎస్-కర్వ్ ఎఫెక్ట్ */
+.nursery-image-side {
+    flex: 1.2;
+    position: relative;
+    overflow: hidden;
+    clip-path: polygon(0 0, 100% 0, 88% 50%, 100% 100%, 0 100%);
+}
+
+.nursery-image-side img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* కుడి వైపు టెక్స్ట్ కంటెంట్ స్టైలింగ్ */
+.nursery-content-side {
+    flex: 1;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #1a4314; 
+}
+
+/* హెడర్ ఏరియా */
+.header-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    text-align: center;
+}
+
+.header-area h2 {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.header-area strong {
+    font-size: 2.2rem;
+    color: #0b4010;
+    display: block;
+    letter-spacing: 1px;
+}
+
+.leaf-icon {
+    font-size: 1.5rem;
+}
+
+.divider {
+    text-align: center;
+    margin: 15px 0;
+    color: #4caf50;
+    font-size: 1.2rem;
+}
+
+/* డిస్క్రిప్షన్ పారాగ్రాఫ్ */
+.description {
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: justify;
+    color: #2b5125;
+}
+
+/* ఫీచర్స్ లిస్ట్ */
+.features-list {
+    list-style: none;
+    margin-top: 15px;
+}
+
+.features-list li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.features-list li:last-child {
+    border-bottom: none;
+}
+
+/* గ్రీన్ బోర్డర్ ఐకాన్ సర్కిల్స్ */
+.icon-circle {
+    width: 42px;
+    height: 42px;
+    background-color: #ffffff;
+    border: 1px solid #0b4010;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0b4010;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+.features-list .text {
+    font-size: 1.05rem;
+    font-weight: bold;
+    color: #0b4010;
+}
+
+.features-list .text strong {
+    color: #2e7d32;
+    margin-right: 5px;
+    font-size: 1.2rem;
+}
+
+
+/* ==========================================
+   COMBINED MEDIA QUERIES (మొబైల్ రెస్పాన్సివ్)
+   ========================================== */
+@media(max-width:768px){
+
+    /* మీ పాత రెస్పాన్సివ్ కోడ్ */
+    nav{
+        flex-direction:column;
+        padding:20px;
+    }
+
+    nav ul{
+        position:static;
+        transform:none;
+        margin-top:15px;
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:15px;
+    }
+
+    .social-icons{
+        margin-top:15px;
+    }
+
+    .content h1{
+        font-size:40px;
+    }
+
+    .content h3{
+        font-size:20px;
+    }
+
+    .content p{
+        font-size:16px;
+    }
+
+    .logo img{
+        width:60px;
+        height:60px;
+    }
+
+    .logo-text{
+        font-size:18px;
+    }
+
+    /* కొత్త సెక్షన్ యొక్క రెస్పాన్సివ్ కోడ్ */
+    .nursery-container {
+        flex-direction: column;
+        width: 95%;
+        margin: 40px auto;
+    }
+    
+    .nursery-image-side {
+        height: 320px;
+        clip-path: none; /* మొబైల్‌లో కర్వ్ లుక్ బాగుండదు కాబట్టి తీసేశాను */
+    }
+    
+    .nursery-content-side {
+        padding: 30px 20px;
+    }
+    
+    .header-area strong {
+        font-size: 1.8rem;
+    }
+}
