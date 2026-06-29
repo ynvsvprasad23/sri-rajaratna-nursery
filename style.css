@@ -1,0 +1,564 @@
+/* ==========================================
+   GLOBAL STYLES & RESET
+   ========================================== */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ==========================================
+   STANDARD FIXED WHATSAPP ICON
+   ========================================== */
+.whatsapp-sticky {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366; /* వాట్సాప్ ఒరిజినల్ గ్రీన్ */
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+    box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.3);
+    z-index: 9999; /* అన్ని పేజీల పైన కనిపించడానికి */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.whatsapp-sticky:hover {
+    transform: scale(1.1);
+    background-color: #20ba5a;
+}
+
+/* ==========================================
+   HERO SECTION & NAVIGATION (FIRST PAGE)
+   ========================================== */
+.hero{
+    width: 100%;
+    height: 100vh;
+    max-height: 100vh;
+    background: url("assets/background main/bg.png") center center/cover no-repeat;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.hero::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.45);
+    z-index: 1;
+}
+
+nav{
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 60px;
+    width: 100%;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo img{
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+}
+
+.logo-text{
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1.1;
+}
+
+/* లోగో టెక్స్ట్ మొత్తం ఒకే రంగులో (Pure White) ఉండటానికి మార్పు */
+.logo-text .brand-name,
+.logo-text {
+    color: #ffffff !important;
+}
+
+/* NAVIGATION LINKS */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 35px;
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover{
+    color: #7CFC00;
+}
+
+/* REALISTIC INSTAGRAM ICON DESIGN */
+.social-icons .insta-realistic {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    color: white;
+    font-size: 26px;
+    text-decoration: none;
+    /* ఒరిజినల్ ఇన్‌స్టాగ్రామ్ గ్రేడియంట్ కలర్స్ */
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-icons .insta-realistic:hover {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0px 6px 15px rgba(214, 36, 159, 0.5);
+}
+
+/* HERO CONTENT */
+.content{
+    position: relative;
+    margin: auto;
+    text-align: center;
+    color: white;
+    z-index: 2;
+    width: 90%;
+    max-width: 800px;
+    padding: 40px 0;
+}
+
+.content h3{
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #90EE90;
+}
+
+.content h1{
+    font-size: 70px;
+    margin-bottom: 20px;
+    color: #90EE90;
+    line-height: 1.2;
+}
+
+.content p{
+    font-size: 22px;
+    line-height: 1.4;
+}
+
+.btn{
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 30px;
+    background: #7CFC00;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover{
+    transform: scale(1.05);
+}
+
+/* ==========================================
+   WHY CHOOSE US SECTION (SECOND PAGE)
+   ========================================== */
+.nursery-container {
+    display: flex;
+    width: 100%;          
+    min-height: 100vh;    
+    height: auto;         
+    background-color: #eaf5e9;
+    border-radius: 0px;   
+    margin: 0;            
+    box-shadow: none;
+    overflow: hidden;
+}
+
+.nursery-image-side {
+    flex: 1.2;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 88% 50%, 100% 100%, 0 100%);
+}
+
+.nursery-image-side img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.nursery-content-side {
+    flex: 1;
+    padding: 60px;       
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #1a4314; 
+}
+
+.header-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    text-align: center;
+}
+
+.header-area h2 {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.header-area strong {
+    font-size: 2.2rem;
+    color: #0b4010;
+    display: block;
+    letter-spacing: 1px;
+}
+
+.leaf-icon {
+    font-size: 1.5rem;
+}
+
+.divider {
+    text-align: center;
+    margin: 15px 0;
+    color: #4caf50;
+    font-size: 1.2rem;
+}
+
+.description {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    text-align: justify;
+    color: #2b5125;
+}
+
+.features-list {
+    list-style: none;
+    margin-top: 15px;
+}
+
+.features-list li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.features-list li:last-child {
+    border-bottom: none;
+}
+
+.icon-circle {
+    width: 42px;
+    height: 42px;
+    background-color: #ffffff;
+    border: 1px solid #0b4010;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0b4010;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+.features-list .text {
+    font-size: 1.05rem;
+    font-weight: bold;
+    color: #0b4010;
+}
+
+.features-list .text strong {
+    color: #2e7d32;
+    margin-right: 5px;
+    font-size: 1.2rem;
+}
+
+/* ==========================================
+   FOOTER SECTION (BLACK & GREEN THEME)
+   ========================================== */
+.footer-section {
+    background-color: #111111; 
+    color: #ffffff;
+    padding: 80px 40px 20px 40px;
+    position: relative;
+    width: 100%;
+    margin-top: 0;
+}
+
+.footer-decorations {
+    position: absolute;
+    top: -25px;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    z-index: 2;
+}
+
+.leaf-border {
+    width: 100%;
+    height: 6px;
+    background-color: #2e7d32; 
+}
+
+.moving-leaf {
+    position: absolute;
+    color: #7CFC00; 
+    font-size: 22px;
+    opacity: 0.8;
+    transform-origin: bottom center;
+    animation: leafWave 3s ease-in-out infinite alternate;
+}
+
+.l1 { top: -15px; left: 12%; animation-delay: 0s; }
+.l2 { top: -22px; left: 38%; font-size: 16px; color: #90EE90; animation-delay: 0.4s; }
+.l3 { top: -14px; left: 65%; animation-delay: 0.2s; }
+.l4 { top: -20px; left: 85%; font-size: 19px; color: #a1ff9e; animation-delay: 0.6s; }
+
+@keyframes leafWave {
+    0% { transform: scale(1) rotate(-8deg); }
+    100% { transform: scale(1.05) rotate(12deg); }
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.2fr 1.2fr 1fr; 
+    gap: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-logo {
+    font-size: 2.2rem;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.footer-logo span {
+    color: #7CFC00; 
+}
+
+.footer-column h3 {
+    font-size: 1.4rem;
+    color: #ffffff;
+    border-bottom: 2px solid #2e7d32;
+    padding-bottom: 8px;
+    display: inline-block;
+    width: fit-content;
+}
+
+.footer-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #cccccc;
+}
+
+.contact-info {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-info li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    color: #cccccc;
+}
+
+.contact-info li i {
+    color: #7CFC00; 
+    font-size: 1.1rem;
+    margin-top: 3px;
+}
+
+.support-phone {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: rgba(46, 125, 50, 0.2);
+    padding: 12px 20px;
+    border-radius: 8px;
+    border-left: 4px solid #7CFC00;
+    margin-bottom: 15px;
+}
+
+.support-phone i {
+    color: #7CFC00;
+    font-size: 1.5rem;
+}
+
+.support-phone span {
+    font-size: 1.3rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 20px auto 0 auto;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #666666;
+    line-height: 1.6;
+}
+
+.footer-bottom span {
+    color: #7CFC00;
+}
+
+/* ==========================================
+   RESPONSIVE MEDIA QUERIES
+   ========================================== */
+@media (max-width: 992px) {
+    nav {
+        padding: 20px 30px;
+    }
+    
+    nav ul {
+        gap: 20px;
+    }
+    
+    .content h1 {
+        font-size: 55px;
+    }
+    
+    .nursery-content-side {
+        padding: 40px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr; 
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: auto;
+        max-height: none;  
+        min-height: 100vh;
+    }
+
+    nav {
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .content h1 {
+        font-size: 38px;
+    }
+
+    .content h3 {
+        font-size: 20px;
+    }
+
+    .content p {
+        font-size: 16px;
+    }
+
+    .logo img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .logo-text {
+        font-size: 18px;
+    }
+
+    .nursery-container {
+        flex-direction: column;
+        height: auto;
+        min-height: auto;   
+    }
+    
+    .nursery-image-side {
+        height: 300px;
+        clip-path: none; 
+    }
+    
+    .nursery-content-side {
+        padding: 30px 20px;
+    }
+    
+    .header-area strong {
+        font-size: 1.8rem;
+    }
+    
+    .features-list li {
+        align-items: flex-start;
+    }
+    
+    .features-list .text {
+        font-size: 0.95rem;
+    }
+
+    .footer-section {
+        padding: 60px 20px 20px 20px;
+    }
+    
+    .footer-container {
+        grid-template-columns: 1fr; 
+        gap: 30px;
+    }
+    
+    .footer-decorations {
+        display: none; 
+    }
+
+    .whatsapp-sticky {
+        width: 50px;
+        height: 50px;
+        font-size: 28px;
+        bottom: 20px;
+        right: 20px;
+    }
+}
